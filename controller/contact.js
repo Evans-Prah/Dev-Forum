@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-const Contact = require('../src/models/contact')
+const Contact = require('../src/models/Contact')
 const sendContactEmail = require('../src/emails/account')
 
 router.get('/contact', (req, res) => {

@@ -59,7 +59,10 @@ router.post('/register', (req, res) => {
           name,
           email,
           password
+          
         })
+        
+        
 
         // Hash password
         bcrypt.genSalt(10, (error, salt) => bcrypt.hash(newUser.password, salt, (error, hash) => {
@@ -68,7 +71,9 @@ router.post('/register', (req, res) => {
           // Set password to hashed
           newUser.password = hash
           // save user
+           
           newUser.save()
+         
             .then(user => {
               req.flash('success_message', 'You are now registered and can log in')
               res.redirect('/login')
@@ -76,6 +81,7 @@ router.post('/register', (req, res) => {
             }).catch(error => console.log(error))
           
         }))
+        sendWelcomeEmail(newUser.name, newUser.email)
 
         // userSchema.pre('save', async function (next) {
         //   const user = this

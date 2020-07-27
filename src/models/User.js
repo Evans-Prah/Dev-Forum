@@ -31,6 +31,15 @@ const userSchema = new mongoose.Schema({
       }
     }
   },
+  free: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'freePlan'
+  }],
+  pro: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'proPlan'
+  }],
+  
 
 }, {
   timestamps: true
