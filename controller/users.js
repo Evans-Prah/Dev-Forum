@@ -7,12 +7,13 @@ const router = express.Router()
 const User = require('../src/models/User')
 const sendWelcomeEmail = require('../src/emails/account')
 
-router.get('/register', (req, res) => {
-  res.render('register')
-})
 
 router.get('/register/freetier', (req, res) => {
   res.render('register')
+})
+
+router.get('/register/pro', (req, res) => {
+  res.render('proAccSignup')
 })
 
 router.get('/login', (req, res) => {
