@@ -31,6 +31,11 @@ const userSchema = new mongoose.Schema({
       }
     }
   },
+
+  stripe_customer_token: {
+      type: String
+    },
+
   free: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'freePlan'
@@ -39,7 +44,9 @@ const userSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'proPlan'
   }],
-  
+  avatar: {
+    type: Buffers
+  }
 
 }, {
   timestamps: true

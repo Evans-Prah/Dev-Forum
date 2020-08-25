@@ -3,6 +3,9 @@ const router = express.Router()
 
 const { ensureAuthenticated } = require('../src/middleware/auth')
 
+require('../controller/payment')
+require('../controller/checkout')
+
 
 
 router.get('/', (req, res) => {

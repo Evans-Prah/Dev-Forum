@@ -5,6 +5,7 @@ const mongoose = require('mongoose')
 const flash = require('connect-flash')
 const session = require('express-session')
 const passport = require('passport')
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 
 require('./db/mongoose')
 
