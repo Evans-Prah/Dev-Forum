@@ -54,11 +54,13 @@ app.use((req, res, next) => {
 const indexRouter = require('../controller/index')
 const userRouter = require('../controller/users')
 const contactRouter = require('../controller/contact')
+const profileRouter = require('../controller/profile')
 
 
 app.use(indexRouter)
 app.use(userRouter)
 app.use(contactRouter)
+app.use(profileRouter)
 
 
 
