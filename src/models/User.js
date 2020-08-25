@@ -47,6 +47,11 @@ const userSchema = new mongoose.Schema({
   timestamps: true
 })
 
+profileSchema.virtual('user', {
+  ref: 'Profile',
+  localField: '_id',
+  foreignField: 'owner'
+})
 
 const User = mongoose.model('User', userSchema)
 
