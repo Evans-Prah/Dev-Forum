@@ -5,7 +5,7 @@ const Profile = require('../src/models/Profile')
 const { ensureAuthenticated } = require('../src/middleware/auth')
 
 
-router.get('/users/profile', ensureAuthenticated, (req, res) => {
+router.get('/profile/new', ensureAuthenticated,  (req, res) => {
   res.render('profile')
 })
 
