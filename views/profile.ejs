@@ -1,1 +1,47 @@
-Profile infomation
+<div class="row">
+  <div class="col-md-6 m-auto">
+    <h1 class="text-center mb-3">Create your Profile</h1>
+    <p class="text-center mb-3">Be a part of the DevForum platform and fill out your profile!</p>
+    <div class="card card-body">
+      <form autocomplete="off"  role="form" action="/profile/new" method="POST">
+        <div class="form-group">
+          <label>First name</label>
+            <input class="form-control" type="text" name="firstname" >
+          
+        </div>
+        <div class="form-group">
+          <label>Last name</label>
+            <input class="form-control" type="text" name="lastname" >
+          
+        </div>
+        <div class="form-group">
+          <label>Role</label>
+            <div class="ui-select">
+              <select name="role" class="form-control">
+                <option value="Developer">Developer</option>
+                <option value="Entrepreneur">Entrepreneur</option>
+                <option value="Investor">Investor</option>
+              </select>
+            </div>
+        </div>
+        <div class="form-group">
+          <label>Phone number</label>
+            <input class="form-control" type="text" name="phone" >
+          
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+            <input class="form-control" type="text" name="email" >
+          
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <textarea class="form-control" name="description"> </textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Update Profile</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

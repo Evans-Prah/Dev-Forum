@@ -8,7 +8,7 @@ const profileSchema = new mongoose.Schema({
   lastname:{
     type: String
   },
-  occupation: {
+  role: {
     type: String
   },
   phone: {
