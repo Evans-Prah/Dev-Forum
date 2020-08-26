@@ -18,9 +18,9 @@ router.post('/contact', (req, res) => {
     else {
       //req.flash('message', 'Message delivered')
       //res.redirect('/contact/response')
-      
+      sendContactEmail(contact.email)
     }
-    sendContactEmail(contact.email)
+    
   })
 })
 
